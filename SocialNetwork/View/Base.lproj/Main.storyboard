@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5LR-sj-c5j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Network" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wce-4j-QaF" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="64.5" y="396.5" width="285" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="UE2-66-Hm4"/>
+                                    <constraint firstAttribute="height" constant="63" id="uvn-DJ-6mT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="45"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="P4d-Mu-geu">
+                                <rect key="frame" x="64.5" y="767" width="285" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5QA-CG-wUT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdi-Ok-t9Z">
+                                <rect key="frame" x="117" y="774" width="146.5" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in with Google">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5LR-sj-c5j" secondAttribute="trailing" id="6e7-nm-34o"/>
+                            <constraint firstItem="Qdi-Ok-t9Z" firstAttribute="leading" secondItem="P4d-Mu-geu" secondAttribute="trailing" constant="-232.5" id="8em-Bq-C2P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P4d-Mu-geu" secondAttribute="bottom" constant="50" id="Bpq-hf-YdR"/>
+                            <constraint firstItem="Qdi-Ok-t9Z" firstAttribute="centerY" secondItem="P4d-Mu-geu" secondAttribute="centerY" id="Cp3-zx-lkX"/>
+                            <constraint firstItem="P4d-Mu-geu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DIc-zg-DwP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qdi-Ok-t9Z" secondAttribute="trailing" symbolic="YES" id="EEj-Jd-sYu"/>
+                            <constraint firstItem="Wce-4j-QaF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="F7X-zQ-nBv"/>
+                            <constraint firstItem="5LR-sj-c5j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G0w-yo-MR0"/>
+                            <constraint firstItem="Wce-4j-QaF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="USi-DY-Rtm"/>
+                            <constraint firstItem="Qdi-Ok-t9Z" firstAttribute="top" secondItem="P4d-Mu-geu" secondAttribute="bottom" constant="-38" id="bWi-0l-ISb"/>
+                            <constraint firstItem="5LR-sj-c5j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dDv-hH-DI7"/>
+                            <constraint firstAttribute="bottom" secondItem="5LR-sj-c5j" secondAttribute="bottom" id="yOG-sm-Hu1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="Wce-4j-QaF" id="7Ne-cD-sjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.72463768115944" y="203.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Google" width="285" height="69"/>
+        <image name="background" width="566.5" height="1166.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
