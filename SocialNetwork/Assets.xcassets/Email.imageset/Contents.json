@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Google.png",
+      "filename" : "Email.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Google@2x.png",
+      "filename" : "Email@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Google@3x.png",
+      "filename" : "Email@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

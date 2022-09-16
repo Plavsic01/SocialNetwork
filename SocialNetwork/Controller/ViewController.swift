@@ -21,6 +21,5 @@ class ViewController: UIViewController {
         titleLabel.text = "SocialNetwork"
     }
 
-
 }
 
