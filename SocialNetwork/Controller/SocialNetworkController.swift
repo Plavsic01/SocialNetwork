@@ -6,17 +6,21 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
+
 
 class SocialNetworkController: UIViewController {
 
-    let db = Firestore.firestore()
+    
+    
+    var userManager = UserManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCurrentUserData()
-        // Do any additional setup after loading the view.
+        userManager.delegate = self
+        
+        userManager.getCurrentUserData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,18 +31,10 @@ class SocialNetworkController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    func getCurrentUserData(){
-        let currUser = Auth.auth().currentUser!
-        let docRef = db.collection("users").document(currUser.uid)
-        docRef.getDocument { document, error in
-            if let document = document,document.exists {
-                let dataDescription = document.data()!
-                print("\(dataDescription["uid"]!)")
-            }else{
-                print("document does not exist")
-            }
-        }
-    }
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation
@@ -50,4 +46,17 @@ class SocialNetworkController: UIViewController {
     }
     */
 
+}
+
+
+extension SocialNetworkController: UserManagerDelegate {
+    
+    func didUpdateUserProfile(_ userManager: UserManager, user: User) {
+        print(user.email)
+        print(user.uid)
+        print(user.created)
+    }
+    
+    
+    
 }

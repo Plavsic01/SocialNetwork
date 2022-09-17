@@ -51,6 +51,7 @@ class RegisterViewController: UIViewController {
                     
                     self.db.collection("users").document(currUser.uid).setData([
                         "created":FieldValue.serverTimestamp(),
+                        "bio":"Default bio",
                         "email":currUser.email!,
                         "username":self.usernameTextField.text!,
                         "uid":currUser.uid,
@@ -59,8 +60,8 @@ class RegisterViewController: UIViewController {
 
                     ])
                     
-                    
-//                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
+                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
+
                 }
                 
             
