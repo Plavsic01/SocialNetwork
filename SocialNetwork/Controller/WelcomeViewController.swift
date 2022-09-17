@@ -9,7 +9,7 @@ import UIKit
 import CLTypingLabel
 
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: CLTypingLabel!
     
@@ -20,9 +20,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Creating animation for title
-        titleLabel.text = "SocialNetwork"
+        
         roundUIElement(name:signInButton)
         roundUIElement(name:signUpButton)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        titleLabel.text = "SocialNetwork"
     }
 
 }

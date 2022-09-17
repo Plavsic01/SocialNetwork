@@ -45,17 +45,19 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                     self.errorLabel.text = e.localizedDescription
                 }else {
-//                    let currUser = Auth.auth().currentUser!
-//                    print(Auth.auth().currentUser!.uid)
+                    let currUser = Auth.auth().currentUser!
+                    print(Auth.auth().currentUser!.uid)
                     print("user uspesno kreiran!")
-//                    self.db.collection("users").document(currUser.uid).setData([
-//                        "email":currUser.email!,
-//                        "username":self.usernameTextField.text!,
-//                        "uid":currUser.uid,
-//                        "followers":[],
-//                        "following":[]
-//
-//                    ])
+                    
+                    self.db.collection("users").document(currUser.uid).setData([
+                        "created":FieldValue.serverTimestamp(),
+                        "email":currUser.email!,
+                        "username":self.usernameTextField.text!,
+                        "uid":currUser.uid,
+                        "followers":[],
+                        "following":[]
+
+                    ])
                     
                     
 //                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
