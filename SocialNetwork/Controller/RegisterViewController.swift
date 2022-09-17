@@ -7,20 +7,34 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roundTextField(name: emailTextField)
-        roundTextField(name: passwordTextField)
+        roundUIElement(name: emailTextField)
+        roundUIElement(name: usernameTextField)
+        roundUIElement(name: passwordTextField)
+        roundUIElement(name: signUpButton)
         
-
     }
+    
+    // kada se registrira korisnik, treba odma kreirati model u bazi koji ce imati njegov uid, bio, email, username,
+    // kada je kreiran nalog, followers, following to ce biti nizovi koji ce imati u sebi druge uid tj uid od drugih
+    // korisnika
+    
+    //TODO: proveriti i username da li postoji
+    
     
     
     @IBAction func signUp(_ sender: UIButton) {
@@ -29,9 +43,22 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email , password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
+                    self.errorLabel.text = e.localizedDescription
                 }else {
+//                    let currUser = Auth.auth().currentUser!
+//                    print(Auth.auth().currentUser!.uid)
                     print("user uspesno kreiran!")
-                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
+//                    self.db.collection("users").document(currUser.uid).setData([
+//                        "email":currUser.email!,
+//                        "username":self.usernameTextField.text!,
+//                        "uid":currUser.uid,
+//                        "followers":[],
+//                        "following":[]
+//
+//                    ])
+                    
+                    
+//                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
                 }
                 
             
@@ -45,10 +72,17 @@ class RegisterViewController: UIViewController {
 
 
 extension UIViewController {
-    func roundTextField(name textFieldName:UITextField) {
-        textFieldName.layer.cornerRadius = 15.0
-        textFieldName.layer.borderWidth = 2.0
-        textFieldName.layer.borderColor = UIColor.black.cgColor
-        textFieldName.clipsToBounds = true
+    func roundUIElement(name elementName:UITextField) {
+        elementName.layer.cornerRadius = 15.0
+        elementName.layer.borderWidth = 2.0
+        elementName.layer.borderColor = UIColor.clear.cgColor
+        elementName.clipsToBounds = true
+    }
+    
+    func roundUIElement(name elementName:UIButton) {
+        elementName.layer.cornerRadius = 15.0
+        elementName.layer.borderWidth = 2.0
+        elementName.layer.borderColor = UIColor.clear.cgColor
+        elementName.clipsToBounds = true
     }
 }
