@@ -12,7 +12,7 @@
 		77076EEE28D4A772005DD009 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77076EED28D4A772005DD009 /* GoogleService-Info.plist */; };
 		775DF8B728D4DA9900B8434C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8B628D4DA9900B8434C /* RegisterViewController.swift */; };
 		775DF8B928D4DDEB00B8434C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8B828D4DDEB00B8434C /* Constants.swift */; };
-		775DF8BB28D4DEB200B8434C /* SocialNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8BA28D4DEB200B8434C /* SocialNetworkController.swift */; };
+		775DF8BB28D4DEB200B8434C /* SocialNetworkHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */; };
 		77655FAB28D601FE00F70B49 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77655FAA28D601FE00F70B49 /* LoginViewController.swift */; };
 		7781A75B28D4A27A009D1B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7781A75A28D4A27A009D1B5C /* AppDelegate.swift */; };
 		7781A75D28D4A27A009D1B5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7781A75C28D4A27A009D1B5C /* SceneDelegate.swift */; };
@@ -20,6 +20,8 @@
 		7781A76228D4A27A009D1B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76028D4A27A009D1B5C /* Main.storyboard */; };
 		7781A76428D4A27B009D1B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76328D4A27B009D1B5C /* Assets.xcassets */; };
 		7781A76728D4A27B009D1B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76528D4A27B009D1B5C /* LaunchScreen.storyboard */; };
+		77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */; };
+		77F23D0F28D62E1300A4FE6F /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0E28D62E1300A4FE6F /* TabController.swift */; };
 		B5FE7A004D966A59EDD640E2 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +32,7 @@
 		77076EED28D4A772005DD009 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		775DF8B628D4DA9900B8434C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		775DF8B828D4DDEB00B8434C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		775DF8BA28D4DEB200B8434C /* SocialNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkController.swift; sourceTree = "<group>"; };
+		775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkHomeController.swift; sourceTree = "<group>"; };
 		77655FAA28D601FE00F70B49 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7781A75728D4A27A009D1B5C /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7781A75A28D4A27A009D1B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		7781A76328D4A27B009D1B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7781A76628D4A27B009D1B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7781A76828D4A27B009D1B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkProfileViewController.swift; sourceTree = "<group>"; };
+		77F23D0E28D62E1300A4FE6F /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		9824C313F17297C28E689F2F /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,8 +91,10 @@
 			children = (
 				7781A75E28D4A27A009D1B5C /* WelcomeViewController.swift */,
 				775DF8B628D4DA9900B8434C /* RegisterViewController.swift */,
-				775DF8BA28D4DEB200B8434C /* SocialNetworkController.swift */,
+				775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */,
 				77655FAA28D601FE00F70B49 /* LoginViewController.swift */,
+				77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */,
+				77F23D0E28D62E1300A4FE6F /* TabController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,10 +262,12 @@
 				77655FAB28D601FE00F70B49 /* LoginViewController.swift in Sources */,
 				775DF8B928D4DDEB00B8434C /* Constants.swift in Sources */,
 				7781A75F28D4A27A009D1B5C /* WelcomeViewController.swift in Sources */,
+				77F23D0F28D62E1300A4FE6F /* TabController.swift in Sources */,
 				7781A75B28D4A27A009D1B5C /* AppDelegate.swift in Sources */,
 				7703A21928D61594006879C7 /* User.swift in Sources */,
+				77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */,
 				7781A75D28D4A27A009D1B5C /* SceneDelegate.swift in Sources */,
-				775DF8BB28D4DEB200B8434C /* SocialNetworkController.swift in Sources */,
+				775DF8BB28D4DEB200B8434C /* SocialNetworkHomeController.swift in Sources */,
 				775DF8B728D4DA9900B8434C /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
