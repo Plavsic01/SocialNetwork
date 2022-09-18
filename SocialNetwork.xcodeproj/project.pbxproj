@@ -22,6 +22,7 @@
 		7781A76728D4A27B009D1B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76528D4A27B009D1B5C /* LaunchScreen.storyboard */; };
 		77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */; };
 		77F23D0F28D62E1300A4FE6F /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0E28D62E1300A4FE6F /* TabController.swift */; };
+		77F23D1528D762A600A4FE6F /* PhotosProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D1328D762A600A4FE6F /* PhotosProfile.swift */; };
 		B5FE7A004D966A59EDD640E2 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		7781A76828D4A27B009D1B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkProfileViewController.swift; sourceTree = "<group>"; };
 		77F23D0E28D62E1300A4FE6F /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		77F23D1328D762A600A4FE6F /* PhotosProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProfile.swift; sourceTree = "<group>"; };
 		9824C313F17297C28E689F2F /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 		7720EF4128D4A33500C61074 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77F23D1328D762A600A4FE6F /* PhotosProfile.swift */,
 				7781A76028D4A27A009D1B5C /* Main.storyboard */,
 			);
 			path = View;
@@ -89,11 +92,9 @@
 		7720EF4228D4A33E00C61074 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				77F23D1228D7625D00A4FE6F /* HomePage */,
+				77F23D1028D7623700A4FE6F /* Autentication */,
 				7781A75E28D4A27A009D1B5C /* WelcomeViewController.swift */,
-				775DF8B628D4DA9900B8434C /* RegisterViewController.swift */,
-				775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */,
-				77655FAA28D601FE00F70B49 /* LoginViewController.swift */,
-				77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */,
 				77F23D0E28D62E1300A4FE6F /* TabController.swift */,
 			);
 			path = Controller;
@@ -132,6 +133,24 @@
 				7781A76828D4A27B009D1B5C /* Info.plist */,
 			);
 			path = SocialNetwork;
+			sourceTree = "<group>";
+		};
+		77F23D1028D7623700A4FE6F /* Autentication */ = {
+			isa = PBXGroup;
+			children = (
+				775DF8B628D4DA9900B8434C /* RegisterViewController.swift */,
+				77655FAA28D601FE00F70B49 /* LoginViewController.swift */,
+			);
+			path = Autentication;
+			sourceTree = "<group>";
+		};
+		77F23D1228D7625D00A4FE6F /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */,
+				77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		F78766CFE418DEF99D8A3AB3 /* Frameworks */ = {
@@ -266,6 +285,7 @@
 				7781A75B28D4A27A009D1B5C /* AppDelegate.swift in Sources */,
 				7703A21928D61594006879C7 /* User.swift in Sources */,
 				77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */,
+				77F23D1528D762A600A4FE6F /* PhotosProfile.swift in Sources */,
 				7781A75D28D4A27A009D1B5C /* SceneDelegate.swift in Sources */,
 				775DF8BB28D4DEB200B8434C /* SocialNetworkHomeController.swift in Sources */,
 				775DF8B728D4DA9900B8434C /* RegisterViewController.swift in Sources */,

@@ -11,5 +11,5 @@ import Foundation
 struct K {
     
     static let segueToSocialNetwork = "socialNetwork"
-    
+    static let cellIdentifier = "showPhotos"
 }
