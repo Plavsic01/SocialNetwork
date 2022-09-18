@@ -10,6 +10,7 @@
 		7703A21928D61594006879C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703A21828D61594006879C7 /* User.swift */; };
 		7703A21B28D61DBF006879C7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703A21A28D61DBF006879C7 /* UserManager.swift */; };
 		77076EEE28D4A772005DD009 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77076EED28D4A772005DD009 /* GoogleService-Info.plist */; };
+		7758F91128D7AEBA00BF921B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758F91028D7AEBA00BF921B /* CollectionViewCell.swift */; };
 		775DF8B728D4DA9900B8434C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8B628D4DA9900B8434C /* RegisterViewController.swift */; };
 		775DF8B928D4DDEB00B8434C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8B828D4DDEB00B8434C /* Constants.swift */; };
 		775DF8BB28D4DEB200B8434C /* SocialNetworkHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */; };
@@ -20,9 +21,9 @@
 		7781A76228D4A27A009D1B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76028D4A27A009D1B5C /* Main.storyboard */; };
 		7781A76428D4A27B009D1B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76328D4A27B009D1B5C /* Assets.xcassets */; };
 		7781A76728D4A27B009D1B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7781A76528D4A27B009D1B5C /* LaunchScreen.storyboard */; };
+		779464D328D782020000A9CC /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779464D228D782020000A9CC /* ImageManager.swift */; };
 		77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */; };
 		77F23D0F28D62E1300A4FE6F /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D0E28D62E1300A4FE6F /* TabController.swift */; };
-		77F23D1528D762A600A4FE6F /* PhotosProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F23D1328D762A600A4FE6F /* PhotosProfile.swift */; };
 		B5FE7A004D966A59EDD640E2 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		7703A21828D61594006879C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = SocialNetwork/Controller/User.swift; sourceTree = SOURCE_ROOT; };
 		7703A21A28D61DBF006879C7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = SocialNetwork/Controller/UserManager.swift; sourceTree = SOURCE_ROOT; };
 		77076EED28D4A772005DD009 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7758F91028D7AEBA00BF921B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		775DF8B628D4DA9900B8434C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		775DF8B828D4DDEB00B8434C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		775DF8BA28D4DEB200B8434C /* SocialNetworkHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkHomeController.swift; sourceTree = "<group>"; };
@@ -43,9 +45,9 @@
 		7781A76328D4A27B009D1B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7781A76628D4A27B009D1B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7781A76828D4A27B009D1B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779464D228D782020000A9CC /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		77F23D0C28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkProfileViewController.swift; sourceTree = "<group>"; };
 		77F23D0E28D62E1300A4FE6F /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
-		77F23D1328D762A600A4FE6F /* PhotosProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProfile.swift; sourceTree = "<group>"; };
 		9824C313F17297C28E689F2F /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		EBE63655656E02DFE4116DA8 /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				7703A21828D61594006879C7 /* User.swift */,
 				7703A21A28D61DBF006879C7 /* UserManager.swift */,
+				779464D228D782020000A9CC /* ImageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -83,7 +86,6 @@
 		7720EF4128D4A33500C61074 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				77F23D1328D762A600A4FE6F /* PhotosProfile.swift */,
 				7781A76028D4A27A009D1B5C /* Main.storyboard */,
 			);
 			path = View;
@@ -96,6 +98,7 @@
 				77F23D1028D7623700A4FE6F /* Autentication */,
 				7781A75E28D4A27A009D1B5C /* WelcomeViewController.swift */,
 				77F23D0E28D62E1300A4FE6F /* TabController.swift */,
+				7758F91028D7AEBA00BF921B /* CollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,10 +288,11 @@
 				7781A75B28D4A27A009D1B5C /* AppDelegate.swift in Sources */,
 				7703A21928D61594006879C7 /* User.swift in Sources */,
 				77F23D0D28D62B8A00A4FE6F /* SocialNetworkProfileViewController.swift in Sources */,
-				77F23D1528D762A600A4FE6F /* PhotosProfile.swift in Sources */,
+				7758F91128D7AEBA00BF921B /* CollectionViewCell.swift in Sources */,
 				7781A75D28D4A27A009D1B5C /* SceneDelegate.swift in Sources */,
 				775DF8BB28D4DEB200B8434C /* SocialNetworkHomeController.swift in Sources */,
 				775DF8B728D4DA9900B8434C /* RegisterViewController.swift in Sources */,
+				779464D328D782020000A9CC /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JY4KZDLY46;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialNetwork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JY4KZDLY46;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialNetwork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -9,6 +9,7 @@ pod 'CLTypingLabel', '~> 0.4.0'
 pod 'IQKeyboardManagerSwift'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'FirebaseStorage'
 
 
 end

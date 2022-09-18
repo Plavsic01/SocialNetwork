@@ -7,36 +7,42 @@
 
 import UIKit
 
-class SocialNetworkProfileViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+class SocialNetworkProfileViewController: UIViewController{
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    var images = [
-        
-    ["square.and.arrow.up","square.and.arrow.up","square.and.arrow.up"], //prvi red
-    ["square.and.arrow.up.fill","square.and.arrow.up.fill","square.and.arrow.up.fill"], // drugi red
-
-]
-    
+    var imagesFromStorage = [
+        "square.and.arrow.up","square.and.arrow.up","square.and.arrow.up",  "square.and.arrow.up.fill","square.and.arrow.up.fill","square.and.arrow.up.fill"
+    ]
     
     var userManager = UserManager()
+    var imageManager = ImageManager()
+    var imagePicker = UIImagePickerController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userManager.delegate = self
-        tableView.dataSource = self
+        imagePicker.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         userManager.getCurrentUserData()
     }
+    
  
-
+    @IBAction func uploadImage(_ sender: UIButton) {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker,animated: true,completion: nil)
+        
+    }
+    
 }
 
 
-extension SocialNetworkProfileViewController: UserManagerDelegate,UITableViewDataSource,UITableViewDelegate{
-    
-    
-    
+extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource,UserManagerDelegate,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     func didUpdateUserProfile(_ userManager: UserManager, user: User) {
         print(user.email)
@@ -45,24 +51,36 @@ extension SocialNetworkProfileViewController: UserManagerDelegate,UITableViewDat
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return images.count
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imagesFromStorage.count
     }
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! PhotosProfile
-        cell.firstImage.image = UIImage(systemName: images[indexPath.row][0])
-        cell.secondImage.image = UIImage(systemName: images[indexPath.row][1])
-        cell.thirdImage.image = UIImage(systemName: images[indexPath.row][2])
-        
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:K.cellIdentifier, for: indexPath) as! CollectionViewCell
+        cell.imageView.image = UIImage(systemName: imagesFromStorage[indexPath.row])
         return cell
-    
-        
     }
     
+    
+   
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+            imageManager.uploadImage(img: pickedImage)
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true,completion: nil)
+    }
     
 }
 
