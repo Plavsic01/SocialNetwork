@@ -23,7 +23,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         roundUIElement(name: emailTextField)
-        roundUIElement(name: usernameTextField)
         roundUIElement(name: passwordTextField)
         roundUIElement(name: signUpButton)
         
@@ -38,37 +37,38 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func signUp(_ sender: UIButton) {
+        
+    
         if let email = emailTextField.text, let password = passwordTextField.text {
+        
         
             Auth.auth().createUser(withEmail: email , password: password) { authResult, error in
                 if let e = error {
-                    print(e.localizedDescription)
                     self.errorLabel.text = e.localizedDescription
+                    
                 }else {
-                    let currUser = Auth.auth().currentUser!
-                    print(Auth.auth().currentUser!.uid)
-                    print("user uspesno kreiran!")
                     
-                    self.db.collection("users").document(currUser.uid).setData([
-                        "created":FieldValue.serverTimestamp(),
-                        "bio":"Default bio",
-                        "email":currUser.email!,
-                        "username":self.usernameTextField.text!,
-                        "uid":currUser.uid,
-                        "followers":[],
-                        "following":[]
-
-                    ])
-                    
-                    self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
-
+                        let currUser = Auth.auth().currentUser!
+                        self.db.collection("users").document(currUser.uid).setData([
+                            "created":FieldValue.serverTimestamp(),
+                            "bio":"Default bio",
+                            "email":currUser.email!,
+                            "username":currUser.email!.components(separatedBy: "@")[0],
+                            "uid":currUser.uid,
+                            "followers":[],
+                            "following":[]
+                        ])
+                        
+                        self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)
+                
                 }
                 
-            
             }
         }
         
     }
+    
+     
     
     
 }

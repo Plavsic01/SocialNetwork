@@ -17,9 +17,7 @@ class SocialNetworkHomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userManager.delegate = self
         
-        userManager.getCurrentUserData()
         
     }
 
@@ -27,14 +25,4 @@ class SocialNetworkHomeController: UIViewController {
 }
 
 
-extension SocialNetworkHomeController: UserManagerDelegate {
-    
-    func didUpdateUserProfile(_ userManager: UserManager, user: User) {
-        print(user.email)
-        print(user.uid)
-        print(user.created)
-    }
-    
-    
-    
-}
+
