@@ -6,29 +6,60 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseAuth
 
 class SocialNetworkProfileViewController: UIViewController{
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var imagesFromStorage = [
-        "square.and.arrow.up","square.and.arrow.up","square.and.arrow.up",  "square.and.arrow.up.fill","square.and.arrow.up.fill","square.and.arrow.up.fill"
-    ]
+    
+    var images:[String] = []
     
     var userManager = UserManager()
-    var imageManager = ImageManager()
     var imagePicker = UIImagePickerController()
     
+
     
+    override func viewWillAppear(_ animated: Bool) {
+        userManager.getCurrentUserData()
+        
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         userManager.delegate = self
         imagePicker.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        userManager.getCurrentUserData()
+        addDatabaseListener()
+
     }
+    
+    func addDatabaseListener() {
+        let currUser = Auth.auth().currentUser!
+        let databaseRef = Firestore.firestore()
+        databaseRef.collection("users").document(currUser.uid).collection("images").addSnapshotListener { querySnapshot, error in
+
+            self.images.removeAll()
+            
+            
+            if let documents = querySnapshot?.documents {
+                
+                for document in documents {
+                    self.images.append(document.data()["url"] as! String)
+                    self.collectionView.reloadData()
+                }
+                
+            }
+            
+        }
+            
+        }
+    
     
  
     @IBAction func uploadImage(_ sender: UIButton) {
@@ -37,12 +68,17 @@ class SocialNetworkProfileViewController: UIViewController{
         
         present(imagePicker,animated: true,completion: nil)
         
+        
     }
     
 }
 
 
-extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource,UserManagerDelegate,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource,
+                                             UserManagerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    
+    
     
     func didUpdateUserProfile(_ userManager: UserManager, user: User) {
         print(user.email)
@@ -52,12 +88,23 @@ extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesFromStorage.count
+        return images.count
     }
 
+   
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:K.cellIdentifier, for: indexPath) as! CollectionViewCell
-        cell.imageView.image = UIImage(systemName: imagesFromStorage[indexPath.row])
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: URL(string: self.images[indexPath.row])!)
+            DispatchQueue.main.async {
+                cell.imageView.image = UIImage(data: data!)
+            }
+        }
+        
         return cell
     }
     
@@ -66,11 +113,19 @@ extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollecti
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            imageView.contentMode = .scaleAspectFit
-            imageView.image = pickedImage
-            imageManager.uploadImage(img: pickedImage)
             
+            //            imageView.contentMode = .scaleAspectFit
+            //            imageView.image = pickedImage
+            
+            ImageManager.uploadImageGetURL(image: pickedImage)
+            
+            
+
+
+            
+
         }
         
         dismiss(animated: true, completion: nil)
@@ -83,6 +138,4 @@ extension SocialNetworkProfileViewController:UICollectionViewDelegate,UICollecti
     }
     
 }
-
-
 

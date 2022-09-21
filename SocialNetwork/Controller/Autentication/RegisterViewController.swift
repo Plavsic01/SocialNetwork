@@ -56,7 +56,8 @@ class RegisterViewController: UIViewController {
                             "username":currUser.email!.components(separatedBy: "@")[0],
                             "uid":currUser.uid,
                             "followers":[],
-                            "following":[]
+                            "following":[],
+                            "posts":0
                         ])
                         
                         self.performSegue(withIdentifier:K.segueToSocialNetwork, sender: self)

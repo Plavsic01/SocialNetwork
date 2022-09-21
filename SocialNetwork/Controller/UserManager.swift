@@ -39,8 +39,11 @@ struct UserManager {
                 let bio = dataDescription["bio"] as! String
                 let followers = dataDescription["followers"] as! [String]
                 let following = dataDescription["following"] as! [String]
+                let posts = dataDescription["posts"] as! Int
+                
+                // dodati Posts
             
-                let currUser = User(username: username, uid: uid, email: email, created: created, bio: bio, followers: followers, following: following)
+                let currUser = User(username: username, uid: uid, email: email, created: created, bio: bio, followers: followers, following: following,posts: posts)
                 
                 delegate?.didUpdateUserProfile(self, user: currUser)
                 

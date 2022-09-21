@@ -440,7 +440,7 @@
                                 <rect key="frame" x="20" y="232" width="374" height="581"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="py3-So-hLQ">
-                                    <size key="itemSize" width="120" height="130"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -449,7 +449,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="showPhotos" id="FgI-u5-uID" customClass="CollectionViewCell" customModule="SocialNetwork" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wpv-Kj-4qn">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LpQ-XW-iNm">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -458,32 +458,16 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="leading" secondItem="Wpv-Kj-4qn" secondAttribute="leading" id="09F-ip-ORc"/>
-                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="centerX" secondItem="Wpv-Kj-4qn" secondAttribute="centerX" id="TqE-ha-2A1"/>
-                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="centerY" secondItem="Wpv-Kj-4qn" secondAttribute="centerY" id="nV1-Ak-Iel"/>
-                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="top" secondItem="Wpv-Kj-4qn" secondAttribute="top" constant="2" id="xZm-9L-mKf"/>
+                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="leading" secondItem="LpQ-XW-iNm" secondAttribute="leading" id="09F-ip-ORc"/>
+                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="centerX" secondItem="LpQ-XW-iNm" secondAttribute="centerX" id="TqE-ha-2A1"/>
+                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="centerY" secondItem="LpQ-XW-iNm" secondAttribute="centerY" id="nV1-Ak-Iel"/>
+                                                <constraint firstItem="fqj-rI-YiO" firstAttribute="top" secondItem="LpQ-XW-iNm" secondAttribute="top" constant="2" id="xZm-9L-mKf"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="130" height="130"/>
                                         <connections>
                                             <outlet property="imageView" destination="fqj-rI-YiO" id="foy-yr-oKB"/>
                                         </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nhC-jc-UQt">
-                                        <rect key="frame" x="130" y="0.0" width="120" height="130"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zKF-SM-rTy">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="130"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZjQ-X5-4Em">
-                                        <rect key="frame" x="250" y="0.0" width="120" height="130"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VOO-Hh-hCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="130"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

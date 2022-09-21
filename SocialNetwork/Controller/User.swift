@@ -17,7 +17,9 @@ struct User {
     let bio:String
     let followers:[String]
     let following:[String]
-    
-    
-        
+    let posts:Int
+
+
 }
+
+
